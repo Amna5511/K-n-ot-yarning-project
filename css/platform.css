@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.workspace {
+    display: flex;
+    flex-direction: row;
+    background-image: url(/images/whiteback.jpg);
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+}
+
+.workspace h2 {
+    align-self: center;
+    justify-content: flex-start;
+    position: relative;
+    font-style: oblique;
+    padding: 2rem;
+    
+}
+
+.list-box {
+    flex-direction: column;
+    border-radius: 1rem;
+    width: 30%;
+    min-height: 70%;
+    margin: 2rem;
+    background-color: var(--dark-color);
+    box-shadow: 20 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+}
+
+.list-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.list-banner {
+    justify-items: center;
+    position: relative;
+    padding: 1rem;
+
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.items {
+    display: flex;
+    height: 80%;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-add {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.items input {
+    padding: 0.3rem 1.2rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    font-family: Arial, sans-serif;
+}
+
+.items button {
+    padding: 0.3rem 1.2rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    font-family: Arial, sans-serif;
+}
+
+.items button:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(90, 50, 24, 0.3);
+}
+
+.user-list {
+    display: flex;
+    width: 75%;
+    height: 75%;
+    align-items: center;
+    padding: 1rem;
+    overflow-y: scroll;
+    scrollbar-color: var(--light-color);
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    letter-spacing: 0.1rem;
+
+}
+
+.user-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    column-gap: 0.7rem;
+
+}
+
+.user-list li {
+    height: fit-content;
+    padding: 0.4rem 0.4rem;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-color);
+    border-radius: 0.2rem;
+    font-weight: 700;
+
+
+}
+
+.stitch-counter {
+    background-color: var(--light-color);
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 20 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 30%;
+    height: 80%;
+
+}
+
+.stitch-counter:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.stitch-counter h2 {
+    font-style: normal;
+}
+
+.counter-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.counter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.counter-buttons button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+.counter-buttons button:hover {
+    background-color: var(--dark-color);
+
+}
