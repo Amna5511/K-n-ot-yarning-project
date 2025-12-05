@@ -2,10 +2,16 @@
 const UL_PRODUCTS = document.getElementById('products');
 const INPUT_ITEM = document.getElementById('input-item');
 const BTN_ADD = document.getElementById('ajouter');
-const ELEMENT = ['yarn', 'acrylic-yarn', 'wool', 'pattern'];
+let ELEMENT = JSON.parse(localStorage.getItem('items')) ?? [];
+console.log(ELEMENT);
+
+
+
+
 
 
 showList();
+
 
 BTN_ADD.addEventListener('click', () => {
 
@@ -14,6 +20,7 @@ BTN_ADD.addEventListener('click', () => {
 
     if (newItem !== "") {
         ELEMENT.push(newItem);
+        localStorage.setItem('items', JSON.stringify(ELEMENT));
 
         INPUT_ITEM.value = "";
 
@@ -38,6 +45,7 @@ function showList() {
 
 function deleteItem(index) {
     ELEMENT.splice(index, 1)
+    localStorage.setItem('items', JSON.stringify(ELEMENT));
 
     showList()
 
@@ -63,14 +71,11 @@ BTN_MINUS.addEventListener('click', () => {
      // COUNT_DIS.textContent=count;
       
 
-      if(count < 0){
+      if(count > 0){
       //
       count --;
 
         COUNT_DIS.textContent=count;
-      } else{
-
-        count = 0;
       }
       console.log(count)
 
