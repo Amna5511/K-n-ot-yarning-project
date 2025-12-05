@@ -44,3 +44,37 @@ function deleteItem(index) {
 
 }
 
+const COUNT_DIS= document.getElementById('counter');
+const BTN_PLUS = document.getElementById('plus');
+const BTN_MINUS= document.getElementById('minus');
+const BTN_RESET= document.getElementById('zero');
+
+let count=0;
+
+COUNT_DIS.textContent= 0;
+
+BTN_PLUS.addEventListener('click', () => { 
+
+      count = count++;
+      COUNT_DIS.textContent=count;
+      console.log(count++)
+})
+BTN_MINUS.addEventListener('click', () => { 
+     // COUNT_DIS.textContent=count;
+      count = count - 1;
+      if((count < 0)){
+         
+      COUNT_DIS.textContent=0;
+
+      }else((count - 1))
+      //console.log(count)
+})
+BTN_RESET.addEventListener('click', () => { 
+
+      count= 0;
+
+      COUNT_DIS.textContent= count;
+
+
+})
+//voici une fonction pour le display directement mais pas sure encore 
