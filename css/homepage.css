@@ -46,16 +46,20 @@ body {
     aspect-ratio: 4/3;
     justify-content: end;
     border-radius: 3rem;
+    
 
 }
 
 
 
 .video video {
-    width: 100%;
+    width: 75%;
     height: 100%;
     object-fit: cover;
     border-radius: 3rem;
+    object-position: center;
+    object-fit: cover ;
+
 }
 
 
