@@ -73,6 +73,7 @@ body {
 
 .right-block h1 {
     font-size: clamp(4rem, 4.5vw, 5rem);
+    padding-left: 2rem;
 }
 
 .right-block h2 {
@@ -197,6 +198,7 @@ body {
     width: 100%;
 }
 
+/* cartes pour chaque service*/
 .card-section2 {
     background-color: var(--light-color);
     padding: 2.5rem 2rem;

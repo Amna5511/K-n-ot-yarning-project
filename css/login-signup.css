@@ -1,3 +1,5 @@
+/* PAGE LOGIN */
+
 .login-container {
     min-height: 100vh;
     display: flex;
@@ -26,12 +28,15 @@
     color: var(--dark-color);
 }
 
+/* FORM CATEGORY */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
+
+/* box with each time the label and input */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -57,6 +62,16 @@
     border-color: var(--accent-color);
 }
 
+.form-group span {
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 0.5rem;
+    color: red;
+    display: none;
+}
+
 .forgot-password {
     text-align: right;
     margin-top: -0.5rem;
@@ -66,7 +81,7 @@
     color: var(--accent-color);
     text-decoration: none;
     font-size: clamp(0.85rem, 1.1vw, 0.95rem);
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .forgot-password a:hover {
@@ -112,14 +127,9 @@
     opacity: 0.7;
 }
 
-/* ===== MEDIA QUERIES POUR LOGIN ===== */
+/*  MEDIA QUERIES POUR LOGIN ET  SIGNUP  */
 
-@media screen and (max-width: 768px) {
-    .login-box {
-        padding: 2.5rem 2rem;
-    }
-}
-
+/* phones */
 @media screen and (max-width: 480px) {
     .login-container {
         padding: 1rem;
@@ -131,5 +141,12 @@
 
     .login-box h1 {
         font-size: 2rem;
+    }
+}
+
+/* tiny tablets */
+@media screen and (max-width: 768px) {
+    .login-box {
+        padding: 2.5rem 2rem;
     }
 }

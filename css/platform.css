@@ -23,23 +23,28 @@ body {
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;
+    gap: 2rem;
 }
 
-.workspace h2 {
+.workspace h1 {
     align-self: center;
     justify-content: flex-start;
     position: relative;
     font-style: oblique;
     padding: 2rem;
-    
+
+
 }
+
+/* liste */
 
 .list-box {
     flex-direction: column;
     border-radius: 1rem;
-    width: 30%;
-    min-height: 70%;
+    width: 50vh;
+    max-height: 60vh;
     margin: 2rem;
+    align-self: center;
     background-color: var(--dark-color);
     box-shadow: 20 20px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -58,10 +63,10 @@ body {
 
 }
 
-h3 {
+.list-box h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--light-color);
 }
 
@@ -144,16 +149,23 @@ h3 {
 
 }
 
+/* stitch counter */
+
+
 .stitch-counter {
     background-color: var(--light-color);
     padding: 2rem;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-content: center;
+    align-self: center;
     border-radius: 1rem;
     text-align: center;
     box-shadow: 20 20px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    width: 30%;
-    height: 80%;
+    width: 50vh;
+    height: 50vh;
 
 }
 
@@ -194,3 +206,117 @@ h3 {
     background-color: var(--dark-color);
 
 }
+
+/* MEDIA QUERIES */
+
+/* media queries phones */
+@media screen and (max-width: 480px) {
+
+
+
+
+    #workspace {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .workspace h1 {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10rem;
+        font-weight: 800;
+        font-size: 2.3rem;
+    }
+
+    .list-box {
+        display: flex;
+        flex-direction: column;
+        min-height: 30vh;
+        width: 100%;
+        margin: 0%;
+    }
+
+    .items-add {
+        height: 3rem;
+
+    }
+
+    .stitch-counter {
+        min-height: min-content;
+        width: 100%;
+
+    }
+
+    .stitch-counter h2 {
+        height: 3rem;
+    }
+
+    footer {
+        align-self: flex-end;
+        width: 100%;
+        position: relative;
+
+    }
+}
+
+/* tablet tiny*/
+@media screen and (max-width: 768px) {
+
+    #workspace {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .workspace h1 {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10rem;
+        font-weight: 800;
+        font-size: 2.3rem;
+    }
+
+    .list-box {
+        display: flex;
+        flex-direction: column;
+        min-height: 30vh;
+        width: 50%;
+        margin: 0%;
+    }
+
+    .items-add {
+        height: 3rem;
+
+    }
+
+    .stitch-counter {
+        max-height: min-content;
+        width: 50%;
+
+    }
+
+    .stitch-counter h2 {
+        height: 3rem;
+
+    }
+
+    footer {
+
+        align-self: flex-end;
+        width: 100%;
+        position: relative;
+
+
+    }
+
+}
+
+@media screen and (max-width: 1800px) {}
