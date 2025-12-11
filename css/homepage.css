@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    background-image: url(/images/whiteback.jpg);
+    background-image: url(/images/beigeback.jpeg);
     background-attachment: fixed;
     /*this is to ensure that the bg stay fixed but allows scrolling */
     background-size: cover;
