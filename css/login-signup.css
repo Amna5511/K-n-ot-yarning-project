@@ -5,10 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/images/backdark2.jpg);
+    background-image: url(/images/base.jpg.jpg);
     /*-gradient(135deg, var(--primary-bg-color) 0%, var(--accent-color) 100%);*/
     padding: 2rem;
+    background-position: 0% 30% 10%;
 }
+
 
 .login-box {
     background-color: var(--light-color);
@@ -76,15 +78,20 @@
     text-align: right;
     margin-top: -0.5rem;
 }
+.forgot-password a{
+    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+}
 
-.forgot-password a {
+.forgot-password a,
+.signup-link a {
     color: var(--accent-color);
     text-decoration: none;
-    font-size: clamp(0.85rem, 1.1vw, 0.95rem);
     transition: 0.3s ease;
 }
 
-.forgot-password a:hover {
+
+.forgot-password a:hover,
+.signup-link a:hover {
     opacity: 0.7;
 }
 
@@ -93,13 +100,13 @@
     background-color: var(--light-color);
     border: 2px solid var(--dark-color);
     color: var(--dark-color);
-    text-decoration: none;
+    /*text-decoration: none;*/
     cursor: pointer;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight: 600;
     transition: all 0.3s ease;
     border-radius: 0.5rem;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .login-button:hover {
@@ -114,6 +121,7 @@
     margin-top: 1.5rem;
     font-size: clamp(0.9rem, 1.2vw, 1rem);
     color: var(--text-color);
+    font-weight: 600;
 }
 
 .signup-link a {
@@ -123,9 +131,6 @@
     transition: opacity 0.3s ease;
 }
 
-.signup-link a:hover {
-    opacity: 0.7;
-}
 
 /*  MEDIA QUERIES POUR LOGIN ET  SIGNUP  */
 

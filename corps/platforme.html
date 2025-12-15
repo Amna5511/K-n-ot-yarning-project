@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(K)not Yarning</title>
+     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/platform.css">
+    <script defer src="/javascript/platform.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+           
+        </div>
+        <nav>
+            <a href="#account">ACCOUNT</a>
+            <a href="#workspace">WORK-SPACE</a>
+            <a href="#eshop">E-SHOP</a>
+            <a href="#community">COMMUNITY</a>
+            <a href="homepage.html">RETOUR HOME</a>
+        </nav>
+    </header>
+
+    <section id="workspace" class="workspace">
+        <!-- YARN CALCULATOR -->
+        <div class="calc-box">
+            <h2>MIX-CALCULATOR</h2>
+            <form class="calc-form" id="calcForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Longueur (cm)</label>
+                        <input type="number" id="length" placeholder="150" value="150" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Largeur (cm)</label>
+                        <input type="number" id="width" placeholder="20" value="20" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Densité</label>
+                        <input type="number" id="density" placeholder="1.5" value="1.5" step="0.1" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mètres/pelote</label>
+                        <input type="number" id="ballLength" placeholder="100" value="100" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Prix/pelote (€)</label>
+                    <input type="number" id="ballPrice" placeholder="5" value="5" step="0.01" required>
+                </div>
+
+                <div class="color-section">
+                    <label> Couleur</label>
+                    <input type="color" id="colorPicker" value="#ff6b6b">
+                </div>
+
+                <div>
+                    <label style="font-weight: 600; font-size: 0.9rem;">Palette</label>
+                    <div class="palette" id="palette"></div>
+                </div>
+
+                <button type="button" class="btn" onclick="calculateYarn()">Calculer</button>
+            </form>
+
+            <div class="result-box" id="results">
+                <div class="result-item">
+                    <span>Fil :</span>
+                    <span id="yarnNeeded">0 m</span>
+                </div>
+                <div class="result-item">
+                    <span>Pelotes :</span>
+                    <span id="ballsNeeded">0</span>
+                </div>
+                <div class="result-item">
+                    <span> Total :</span>
+                    <span id="totalPrice">0 €</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO LIST -->
+        <div class="list-box">
+            <div class="list-banner">
+                <h2>WORK-LIST</h2>
+            </div>
+            <div class="items">
+                <div class="items-add">
+                    <input id="input-item" type="text" placeholder="ajouter un élèment">
+                    <button id="ajouter">+</button>
+                </div>
+                <div class="user-list">
+                    <ul id="products"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2025 Knot Yarning - All rights reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 /* Root variables  */
 :root {
-    --nav-color: #d9d9d9;
+    --nav-color: #333;
     --primary-bg-color: #f6f1eb;
     --accent-color: #785539;
     --dark-color: #333;
@@ -9,7 +9,7 @@
     --text-color: #3D3539;
 }
 
-/* BASE FOR ALL OF THE PAGES */
+/* BASE FOR ALL OF THE PAGES HAAA */
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +30,9 @@ body {
     font-family: 'Arial', sans-serif;
     color: var(--text-color);
 }
+
+
+
 
 header {
     position: fixed;
@@ -52,6 +55,7 @@ header {
     font-weight: bold;
 }
 
+
 header nav {
     display: flex;
     align-items: center;
@@ -62,7 +66,7 @@ header nav {
 
 
 header nav a {
-    color: var(--dark-color);
+    color: var(--light-color);
     text-decoration: none;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight: 500;
@@ -113,6 +117,8 @@ section h2 {
     margin-bottom: 2rem;
     color: var(--text-color);
 }
+
+
 
 /* FOOTER BASE */
 footer {

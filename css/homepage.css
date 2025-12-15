@@ -11,12 +11,16 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    background-image: url(/images/beigeback.jpeg);
+    background-image: url(/images/base.jpg.jpg);
     background-attachment: fixed;
     /*this is to ensure that the bg stay fixed but allows scrolling */
     background-size: cover;
     background-position: center;
 
+}
+
+nav {
+    height: 3rem;
 }
 
 
@@ -46,7 +50,7 @@ body {
     aspect-ratio: 4/3;
     justify-content: end;
     border-radius: 3rem;
-    
+
 
 }
 
@@ -58,7 +62,7 @@ body {
     object-fit: cover;
     border-radius: 3rem;
     object-position: center;
-    object-fit: cover ;
+    object-fit: cover;
 
 }
 
@@ -72,6 +76,8 @@ body {
     height: 100%;
     width: 35%;
     gap: 1.5rem;
+    border-radius: 3rem;
+
 
 }
 
@@ -234,6 +240,7 @@ body {
 }
 
 /* MEDIA QUERIES HOME SECTION */
+
 
 /* phones */
 @media screen and (max-width: 480px) {

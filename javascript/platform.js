@@ -51,42 +51,56 @@ function deleteItem(index) {
 
 
 }
-// JS COUNTER
 
-const COUNT_DIS = document.getElementById('counter');
-const BTN_PLUS = document.getElementById('plus');
-const BTN_MINUS = document.getElementById('minus');
-const BTN_RESET = document.getElementById('zero');
+        // palette generator with hex filter easy 
+        function generatePalette(hex) {
+            const palette = document.getElementById('palette');
+            palette.innerHTML = '';
 
-let count = 0;
+            const colors = [
+                { hex, label: 'Base' },
+                { hex, filter: 'hue-rotate(120deg)', label: '+120°' },
+                { hex, filter: 'hue-rotate(240deg)', label: '+240°' }
+            ];
 
-COUNT_DIS.textContent = 0;
+            colors.forEach(color => {
+                const div = document.createElement('div');
+                div.className = 'palette-color';
+                div.style.backgroundColor = color.hex;
+                if (color.filter) {
+                    div.style.filter = color.filter;
+                }
+                div.textContent = color.label;
+                div.onclick = () => navigator.clipboard.writeText(color.hex) && alert('Copié: ' + color.hex);
+                palette.appendChild(div);
+            });
+        }
 
-BTN_PLUS.addEventListener('click', () => {
+        // ===== YARN CALCULATOR =====
+        function calculateYarn() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            const density = parseFloat(document.getElementById('density').value);
+            const ballLength = parseFloat(document.getElementById('ballLength').value) * 100;
+            const ballPrice = parseFloat(document.getElementById('ballPrice').value);
 
-    count++;
-    COUNT_DIS.textContent = count;
-    
-})
-BTN_MINUS.addEventListener('click', () => {
-   
+            if (!length || !width || !density || !ballLength || !ballPrice) {
+                alert('Remplissez tous les champs');
+                return;
+            }
 
+            const yarnNeededCm = (length + width) * density;
+            const ballsNeeded = Math.ceil(yarnNeededCm / ballLength);
+            const totalPrice = (ballsNeeded * ballPrice).toFixed(2);
 
-    if (count > 0) {
-        
-        count--;
+            document.getElementById('yarnNeeded').textContent = (yarnNeededCm / 100).toFixed(2) + ' m';
+            document.getElementById('ballsNeeded').textContent = ballsNeeded;
+            document.getElementById('totalPrice').textContent = totalPrice + ' €';
+            document.getElementById('results').style.display = 'flex';
+        }
+         document.getElementById('calcForm').addEventListener('keypress', e => e.key === 'Enter' && calculateYarn());
+        document.getElementById('colorPicker').addEventListener('change', e => generatePalette(e.target.value));
 
-        COUNT_DIS.textContent = count;
-    }
-    console.log(count)
-
-})
-
-BTN_RESET.addEventListener('click', () => {
-
-    count = 0;
-
-    COUNT_DIS.textContent = count;
-
-
-})
+        // Init
+        showList();
+        generatePalette('#7d5740ff');
