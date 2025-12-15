@@ -18,7 +18,7 @@ BTN_SUBMIT.addEventListener('click', (e) => {
 
 
    if (email === 'test@test.be' && password === 'Test1234=') {
-      window.location.href = './plateforme.html';
+      window.location.href = './platforme.html';
    }
    else {
       ERROR_SPAN.textContent = 'Email ou mot de passe incorrect';
